@@ -21,12 +21,9 @@ public class HttpUtil {
 		HttpPost request = HttpUtil.getHttpPost(url);
 		String result = "";
 		try {
-			System.out.println("5555555555555");
 			request.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
 			// 获得响应对象
-			System.out.println("6666666666666");
 			HttpResponse response = HttpUtil.getHttpResponse(request);
-			System.out.println("999999");
 			System.out.println("response.getStatusLine().getStatusCode() :" + response.getStatusLine().getStatusCode());
 			// 判断是否请求成功
 			if (response.getStatusLine().getStatusCode() == 200) {
@@ -56,9 +53,7 @@ public class HttpUtil {
 		// 设置连接与通信超时为10秒
 		HttpConnectionParams.setConnectionTimeout(httpClient.getParams(), 10000);
 		HttpConnectionParams.setSoTimeout(httpClient.getParams(), 10000);
-		System.out.println("777777777");
 		HttpResponse response = httpClient.execute(request);
-		System.out.println("8888888888");
 		return response;
 	}
 	

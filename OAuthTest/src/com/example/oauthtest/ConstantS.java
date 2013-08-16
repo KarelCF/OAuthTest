@@ -1,7 +1,7 @@
 package com.example.oauthtest;
 
 
-public interface ConstantS {
+public interface Constants {
 	
 	public static final String APP_KEY = "3945597910";
 	public static final String APP_SECRET = "86f10f413707d93e1b036c1639b7c868";
